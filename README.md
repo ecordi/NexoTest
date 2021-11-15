@@ -39,14 +39,14 @@ Modificación de persona: METHOD PUT (Respetar convenciones en la url)
         "dni": 1,
         "nombre": "NameTest",
         "apellido": "LastNameTest",
-        "edad": 27,
+        "edad": 30,
         "foto": null,
         "direccionList": [
             {
                 "id": 1,
                 "calle": "Chacabuco",
                 "numCalle": 7,
-                "ciudad": "cba",
+                "ciudad": "Córdoba Capital",
                 "persona": 1
             }
         ]
