@@ -34,6 +34,7 @@ Alta de persona: METHOD POST (Respetar convenciones en la url). Que reciba la fo
 
 ```
 Modificación de persona: METHOD PUT (Respetar convenciones en la url)
+```
 {
         "dni": 1,
         "nombre": "NameTest",
@@ -50,6 +51,7 @@ Modificación de persona: METHOD PUT (Respetar convenciones en la url)
             }
         ]
     }
+```
 Eliminación de persona: METHOD DELETE  (Respetar convenciones en la url). 
 6)	Obtener un persona por ID
 ```
