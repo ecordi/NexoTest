@@ -61,7 +61,7 @@ class PersonaControllerTest {
     void findAll()throws Exception {
         List<Persona> list = testEntityList() ;
         when(repository.findAll()).thenReturn(list);
-        mockMvc.perform(get("/personas/")
+        mockMvc.perform(get("/personas")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))

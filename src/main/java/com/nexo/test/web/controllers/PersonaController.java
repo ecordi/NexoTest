@@ -21,7 +21,7 @@ public class PersonaController {
     @Autowired
     private PersonaService personaService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public ResponseEntity<List<PersonaModel>> findAll() {
         return ResponseEntity.ok(personaService.findAll());
     }
@@ -39,7 +39,7 @@ public class PersonaController {
         return ResponseEntity.ok(personaService.update(persona));
     }
 
-    @DeleteMapping("delete/{dni}")
+    @DeleteMapping("/delete/{dni}")
     public ResponseEntity delete(@PathVariable Long dni) {
         if (!personaService.findByDni(dni).isPresent()) {
             ResponseEntity.badRequest().build();
@@ -48,24 +48,24 @@ public class PersonaController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/dni/{dni}")
-    public ResponseEntity<PersonaModel> findByDni(@PathVariable Long dni) {
+    @GetMapping("{dni}")
+    public ResponseEntity<PersonaModel> findByDni(@PathVariable(name = "dni") Long dni) throws Exception {
         if (!personaService.findByDni(dni).isPresent()) {
             ResponseEntity.badRequest().build();
         }
         return ResponseEntity.ok(personaService.findByDni(dni).get());
     }
 
-    @GetMapping("/nombre/{nombre}")
-    public ResponseEntity<List<PersonaModel>> findByNombre(@PathVariable String nombre) {
+    @GetMapping("{nombre}")
+    public ResponseEntity<List<PersonaModel>> findByNombre(@PathVariable(name = "nombre") String nombre) {
         if (!personaService.findByNombre(nombre).isEmpty()) {
             ResponseEntity.badRequest().build();
         }
         return ResponseEntity.ok(personaService.findByNombre(nombre));
     }
 
-    @GetMapping("/edad/{edad}")
-    public ResponseEntity<List<PersonaModel>> findByEdad(@PathVariable int edad) {
+    @GetMapping("{edad}")
+    public ResponseEntity<List<PersonaModel>> findByEdad(@PathVariable(name="edad") int edad) {
         return ResponseEntity.ok(personaService.findByEdad(edad));
     }
 
