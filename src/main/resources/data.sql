@@ -1,0 +1,34 @@
+--
+ CREATE SCHEMA `testdb`;
+-- CREATE TABLE `testdb`.`personas` (
+--                             `dni` INT NOT NULL AUTO_INCREMENT,
+--                             `apellido` varchar(255) NOT NULL,
+--                             `edad` int NOT NULL,
+--                             `foto` varchar(255) DEFAULT NULL,
+--                             `nombre` varchar(255) NOT NULL,
+--                             PRIMARY KEY (`dni`)
+-- );
+-- CREATE TABLE `testdb`.`direcciones` (
+--                                `id` int NOT NULL,
+--                                `calle` varchar(255) DEFAULT NULL,
+--                                `ciudad` varchar(255) DEFAULT NULL,
+--                                `num_calle` int DEFAULT NULL,
+--                                `persona` int DEFAULT NULL,
+--                                PRIMARY KEY (`id`),
+--                                KEY `FKjj2qnsmaxmr82uuwblerrst1w` (`persona`),
+--                                CONSTRAINT `FKjj2qnsmaxmr82uuwblerrst1w` FOREIGN KEY (`persona`) REFERENCES `personas` (`dni`)
+-- ) ;
+
+-- INSERT INTO `testdb`.`personas` (`dni`, `apellido`, `edad`, `foto`, `nombre`)
+-- VALUES ('3596', 'Test', '30', null, 'Eugenio');
+-- INSERT INTO `testdb`.`personas` (`dni`, `apellido`, `edad`, `foto`, `nombre`)
+-- VALUES ('4055', 'Test', '27', null,'Lau');
+-- INSERT INTO `testdb`.`personas` (`dni`, `apellido`, `edad`, `foto`, `nombre`)
+-- VALUES ('8056', 'Pepe', '29', null, 'Leo');
+-- INSERT INTO `testdb`.`personas` (`dni`, `apellido`, `edad`, `foto`, `nombre`)
+-- VALUES ('9630', 'Rodriguez', '60', null, 'Alba');
+--
+-- INSERT INTO `testdb`.`direcciones` (`id`, `calle`, `ciudad`, `num_calle`, `persona`)
+-- VALUES ('1', 'Chacabuco', 'Cba', '7', '3596');
+--
+
